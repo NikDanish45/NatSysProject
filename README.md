@@ -23,7 +23,8 @@ Team Mates:
 ***Questions:***
 
 1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** https://github.com/NikDanish45/NatSysProject
-2. How many files and folders are in this repository. ***(1 mark)*** 1 markdown file and 1 images folder (6 files)
+2. How many files and folders are in this repository. ***(1 mark)*** 
+>1 markdown file and 1 images folder (6 files)
 
 
 ## Exploring github codespaces
