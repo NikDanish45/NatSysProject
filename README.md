@@ -60,8 +60,10 @@ Team Mates:
 Enhance Configuration: RAM: 8GB Disk Space: 64GB vCPU: 2 Cores.
 3. Why must we commit and sync our current work on source control? ***(1 mark)
 > A) to preserve changes because it saves your work so you can revert if needed 
+
 > B) for collaboration because it can shares upadates with team members
-> C) for backup because to protect your work from loss or failures.**
+
+> C) for backup because to protect your work from loss or failures.
 
 ## Exploring the Terminal
 
