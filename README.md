@@ -1,11 +1,11 @@
 # Net&Sys Assignment: Running Containers for Application Development
 
-Group Name: __Fill your team name__. 
+Group Name: Group HIM 
 
 Team Mates:
-1. __Fill name__ and __matric no__
-2. __Fill name__ and __matric no__
-3. __Fill name__ and __matric no__
+1. NIK DANISH RIFQI BIN NIK REDUAN and 2215205
+2. MUHAMMAD AZRI BIN BURHAN and 2211585
+3. SYED HARITH IRFAN BIN SYED HASNURIZAL and 2211585
 
 ## Rules
 1. You are allowed to have **3 group** members.
@@ -22,8 +22,8 @@ Team Mates:
 
 ***Questions:***
 
-1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** __Fill answer here__.
-2. How many files and folders are in this repository. ***(1 mark)*** __Fill answer here__.
+1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** https://github.com/NikDanish45/NatSysProject
+2. How many files and folders are in this repository. ***(1 mark)*** 1 markdown file and 1 images folder (6 files)
 
 
 ## Exploring github codespaces
