@@ -55,9 +55,13 @@ Team Mates:
 
 ***Questions:***
 
-1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** Ubuntu Linux.
-2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** Standard Configuration: RAM: 4GB, Disk Space: 32GB, vCPU: 1 Core 
-Enhance Configuration: RAM: 8GB Disk Space: 64GB vCPU: 2 Cores.
+1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** 
+> Ubuntu Linux.
+2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** 
+> Standard Configuration: RAM: 4GB, Disk Space: 32GB, vCPU: 1 Core 
+
+> Enhance Configuration: RAM: 8GB Disk Space: 64GB vCPU: 2 Cores.
+
 3. Why must we commit and sync our current work on source control? ***(1 mark)
 > A) to preserve changes because it saves your work so you can revert if needed 
 
@@ -312,22 +316,28 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6165.4 avail Mem
 Linux codespaces-0449da 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 ```
 11. What is the available free memory in the system. ***(1 mark)*** 
-203 MiB.
+
+> 203 MiB.
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** 
-20772084 KiB.
+> 20772084 KiB.
 13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)***
-Version 6.5.0-1021-azure, Ubuntu 22.04
-Architecture: x86_64.
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** A)ls is for list files and directories
-B)ls -asl is  to provides a details listing that includes hidden files,file permissions ownership,size and modification time. 
+> Version 6.5.0-1021-azure, Ubuntu 22.04
+
+> Architecture: x86_64.
+14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)***
+>  A)ls is for list files and directories
+
+>  B)ls -asl is  to provides a details listing that includes hidden files,file permissions ownership,size and modification time. 
 15. What is the TLB size of the Virtual CPU. ***(1 mark)*** 
-2560 4K pages.
+> 2560 4K pages.
 16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** 
- processor 0 : 3078.753 MHz
- processor 1 : 3099.018 MHz
+ > processor 0 : 3078.753 MHz
+
+ > processor 1 : 3099.018 MHz
 17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** 
-PID 834 running 'node' command
-Usage 1.3% CPU and 4.3% Memory
+> PID 834 running 'node' command
+
+> Usage 1.3% CPU and 4.3% Memory
 
 ## Running your own container instance.
 
@@ -388,9 +398,9 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 ***Questions:***
 
 1. Are files in the container persistent. Why not?. ***(1 mark)*** 
-The files in container  is not persistent .This is because when any changes made to file system during container's runtime when the container is removed or stopped .Hence, container is designed to be ephemeral
+> The files in container  is not persistent .This is because when any changes made to file system during container's runtime when the container is removed or stopped .Hence, container is designed to be ephemeral
 2. Can we run two, or three instances of debian linux? . ***(1 mark)*** 
-Yes , we can run multiple instance of debian in simultaneous.
+> Yes , we can run multiple instance of debian in simultaneous.
 
 ## Running your own container with persistent storage
 
@@ -421,7 +431,7 @@ total 0
 sudo chown -R codespace:codespace myroot
 
 ```
-
+> Yes you cam change the permission of files to user codespace
 ```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ sudo chown -R codespace:codespace myroot
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ ls -l myroot/
@@ -458,9 +468,9 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 drwxrwxrwx+ 2 codespace codespace 4096 Jun 18 13:49 .
 ```
 2. What port is the apache web server running. 
-Port 80
+> Port 80
 3. What port is open for http protocol on the host machine? 
-Port 8080
+> Port 8080
 
 ## Create SUB Networks
 In docker, you can create your own private networks where you can run multiple services, in this part, we will create two networks, one called bluenet and the other is rednet
@@ -478,8 +488,9 @@ docker run -itd --net rednet --name c2 busybox sh
 ***Questions:***
 
 1. Describe what is busybox and what is command switch **--name** is for? . ***(2 mark)*** 
-The busybox is lightweight since its single executable that combine many common Unix or Linux command-line tools and used in small or embedded system
-The --name switch in Docker used to assign specific name to a container and easy to referece and manage 
+> The busybox is lightweight since its single executable that combine many common Unix or Linux command-line tools and used in small or embedded system.
+
+> The --name switch in Docker used to assign specific name to a container and easy to referece and manage 
 2. Explore the network using the command ```docker network ls```, show the output of your terminal. ***(1 mark)***
 ```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ docker network ls
@@ -491,11 +502,13 @@ NETWORK ID     NAME       DRIVER    SCOPE
 3c4be9ac572d   rednet     bridge    local
 ```
 3. Using ```docker inspect c1``` and ```docker inspect c2``` inscpect the two network. What is the gateway of bluenet and rednet.? ***(1 mark)***
- c1 :172.18.0.1 
- c2 :172.20.0.1
+ > c1 :172.18.0.1 
+
+ > c2 :172.20.0.1
 4. What is the network address for the running container c1 and c2.
-c1 : 172.18.0.2 IPAddress
-c2 : 172.20.0.2 IPAddress
+> c1 : 172.18.0.2 IPAddress
+
+> c2 : 172.20.0.2 IPAddress
 5. Using the command ```docker exec c1 ping c2```, which basically issue a ping from container c1 to c2. Are you able to ping? Show your output . 
 ```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ docker exec c1 ping c2
