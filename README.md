@@ -78,8 +78,8 @@ codespace
 Look at the TERMINAL tab. Run the following commands and provide the output here. 
 
 1. Run the command **pwd** . ***(1 mark) 
-***@NikDanish45 ➜ /workspaces/NatSysProject (main) $ pwd
-/workspaces/NatSysProject***
+```@NikDanish45 ➜ /workspaces/NatSysProject (main) $ pwd
+/workspaces/NatSysProject```
 2. Run the command **cat /etc/passwd** . ***(1 mark)
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ cat /etc/passwd
 root:x:0:0:root:/root:/bin/bash
