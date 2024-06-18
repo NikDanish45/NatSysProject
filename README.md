@@ -83,6 +83,7 @@ Look at the TERMINAL tab. Run the following commands and provide the output here
 /workspaces/NatSysProject
 ```
 2. Run the command **cat /etc/passwd** . ***(1 mark)
+```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ cat /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
@@ -109,7 +110,9 @@ systemd-resolve:x:103:104:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
 messagebus:x:104:105::/nonexistent:/usr/sbin/nologin
 codespace:x:1000:1000::/home/codespace:/bin/bash
 sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
+```
 3. Run the command **df** . ***(1 mark)*** 
+```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ df
 Filesystem     1K-blocks     Used Available Use% Mounted on
 overlay         32847680 10381496  20772084  34% /
@@ -206,10 +209,14 @@ shm                65536        0     65536   0% /dev/shm
 2616    ./.git
 1972    ./images
 4608    .
+```
 5. Run the command **ls** . ***(1 mark)*** 
+```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ ls
 README.md  images
+```
 6. Run the command **ls -asl** . ***(1 mark)***
+```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ ls -asl
 total 36
  4 drwxrwxrwx+ 4 codespace root  4096 Jun 18 10:18 .
@@ -217,12 +224,16 @@ total 36
  4 drwxrwxrwx+ 9 codespace root  4096 Jun 18 11:34 .git
 20 -rw-rw-rw-  1 codespace root 18639 Jun 18 11:48 README.md
  4 drwxrwxrwx+ 2 codespace root  4096 Jun 18 10:18 images
+ ```
 7. Run the command **free -h** . ***(1 mark)*** 
+```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ free -h
               total        used        free      shared  buff/cache   available
 Mem:          7.7Gi       1.3Gi       203Mi        64Mi       6.2Gi       6.0Gi
 Swap:            0B          0B          0B
+```
 8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** 
+```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ cat /proc/cpuinfo
 processor       : 0
 vendor_id       : AuthenticAMD
@@ -279,7 +290,9 @@ clflush size    : 64
 cache_alignment : 64
 address sizes   : 48 bits physical, 48 bits virtual
 power management:
+```
 9. Run the command **top** and type **q** to quit. ***(1 mark)*** 
+```
 top - 11:53:13 up 20 min,  0 users,  load average: 0.79, 0.42, 0.37
 Tasks:  17 total,   1 running,  16 sleeping,   0 stopped,   0 zombie
 %Cpu(s):  3.4 us,  6.9 sy,  0.0 ni, 89.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
@@ -287,10 +300,14 @@ MiB Mem :   7929.6 total,    196.1 free,   1384.5 used,   6348.9 buff/cache
 MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6165.4 avail Mem 
 
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                 
-    834 codespa+  20   0   21.5g 344628  49920 S  13.3   4.2   0:26.79 node    
+    834 codespa+  20   0   21.5g 344628  49920 S  13.3   4.2   0:26.79 node
+```   
+     
 10. Run the command **uname -a**. ***(1 mark)*** 
+```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ uname -a
 Linux codespaces-0449da 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+```
 11. What is the available free memory in the system. ***(1 mark)*** 
 203 MiB.
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** 
@@ -390,20 +407,24 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 ***Questions:***
 
 1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** 
+```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ ls -l myroot/
 total 0
 -rw-rw-rw- 1 root root 0 Jun 18 13:19 helloworld.txt
+```
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
 sudo chown -R codespace:codespace myroot
 
 ```
+
+```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ sudo chown -R codespace:codespace myroot
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ ls -l myroot/
 total 0
 -rw-rw-rw- 1 codespace codespace 0 Jun 18 13:26 helloworld.txt
-
+```
 ## You are on your own, create your own static webpage
 
 1. Create a directory called webpage in your host machine
@@ -429,8 +450,10 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 ***Questions:***
 
 1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** 
+```
 @NikDanish45 ➜ /workspaces/NatSysProject/webpage (main) $ ls -ld
 drwxrwxrwx+ 2 codespace codespace 4096 Jun 18 13:49 .
+```
 2. What port is the apache web server running. 
 Port 80
 3. What port is open for http protocol on the host machine? 
@@ -455,6 +478,7 @@ docker run -itd --net rednet --name c2 busybox sh
 The busybox is lightweight since its single executable that combine many common Unix or Linux command-line tools and used in small or embedded system
 The --name switch in Docker used to assign specific name to a container and easy to referece and manage 
 2. Explore the network using the command ```docker network ls```, show the output of your terminal. ***(1 mark)***
+```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ docker network ls
 NETWORK ID     NAME       DRIVER    SCOPE
 6d6fa4f74ef8   bluenet    bridge    local
@@ -462,6 +486,7 @@ NETWORK ID     NAME       DRIVER    SCOPE
 6aebcc461fd6   host       host      local
 12e595effb8f   none       null      local
 3c4be9ac572d   rednet     bridge    local
+```
 3. Using ```docker inspect c1``` and ```docker inspect c2``` inscpect the two network. What is the gateway of bluenet and rednet.? ***(1 mark)***
  c1 :172.18.0.1 
  c2 :172.20.0.1
@@ -469,9 +494,10 @@ NETWORK ID     NAME       DRIVER    SCOPE
 c1 : 172.18.0.2 IPAddress
 c2 : 172.20.0.2 IPAddress
 5. Using the command ```docker exec c1 ping c2```, which basically issue a ping from container c1 to c2. Are you able to ping? Show your output . 
+```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ docker exec c1 ping c2
 ping: bad address 'c2'
-
+```
 ## Bridging two SUB Networks
 1. Let's try this again by creating a network to bridge the two containers in the two subnetworks
 ```
@@ -480,7 +506,7 @@ docker network connect bridgenet c1
 docker network connect bridgenet c2
 docker exec c1 ping c2
 ```
-
+```
 @NikDanish45 ➜ /workspaces/NatSysProject (main) $ docker exec c1 ping c2
 PING c2 (172.21.0.3): 56 data bytes
 64 bytes from 172.21.0.3: seq=0 ttl=64 time=0.139 ms
@@ -521,6 +547,7 @@ PING c2 (172.21.0.3): 56 data bytes
 64 bytes from 172.21.0.3: seq=35 ttl=64 time=0.082 ms
 64 bytes from 172.21.0.3: seq=36 ttl=64 time=0.086 ms
 64 bytes from 172.21.0.3: seq=37 ttl=64 time=0.087 ms
+```
 
 ## What to submit
 
